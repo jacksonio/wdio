@@ -6,7 +6,7 @@ Feature description
     Given Google page is opened
     When Search with <searchItem>
     Then Click on the <compareUrl>
-    Then Url should match <check>
+    Then Url should match <compareUrl>
     Examples:
       | searchItem | compareUrl            |
       | WDIO       | https://webdriver.io/ |

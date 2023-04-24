@@ -1,5 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber'
 import * as assert from "assert";
+import * as chai from "chai";
 
 Given(/Google page is opened/, async function () {
     await browser.url('https://google.com')
@@ -21,5 +22,5 @@ Then(/Click on the (.*)/, async function (linkAddress) {
 
 Then(/Url should match (.*)/, async function (linkAddress) {
     const siteUrl = await browser.getUrl();
-    assert.equal(siteUrl, linkAddress);
+    chai.expect(siteUrl).to.equal(linkAddress);
 })
