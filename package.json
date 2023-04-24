@@ -1,0 +1,22 @@
+{
+  "name": "wdio",
+  "scripts": {
+    "web": "npx wdio run ./config/web.wdio.conf.ts",
+    "allure:generate": "npx allure generate --clean",
+    "allure:open": "npx allure open"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@wdio/allure-reporter": "^8.8.6",
+    "@wdio/cli": "^8.8.6",
+    "@wdio/cucumber-framework": "^8.8.6",
+    "@wdio/local-runner": "^8.8.6",
+    "@wdio/spec-reporter": "^8.8.6",
+    "chai": "^4.3.7",
+    "chromedriver": "^112.0.0",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "wdio-chromedriver-service": "^8.1.1"
+  }
+}

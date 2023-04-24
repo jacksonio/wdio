@@ -1,0 +1,7 @@
+node_modules/
+/.idea/
+allure-report/
+allure-results/
+_results_
+/results/
+.env
