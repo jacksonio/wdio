@@ -1,10 +1,5 @@
-import { Given, When, Then } from '@cucumber/cucumber'
-import * as assert from "assert";
-import * as chai from "chai";
-
-Given(/Google page is opened/, async function () {
-    await browser.url('https://google.com')
-})
+import { Then, When } from '@cucumber/cucumber'
+import * as chai from 'chai'
 
 When(/Search with (.*)/, async function (searchValue) {
     const elem = await $(`[name=q]`)
