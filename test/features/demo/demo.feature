@@ -1,12 +1,10 @@
 Feature: Demo feature
 
-Feature description
-
   Scenario Outline: Run first demo case
-    Given Google page is opened
+    Given Open page with provided url <navigateUrl>
     When Search with <searchItem>
     Then Click on the <compareUrl>
     Then Url should match <compareUrl>
     Examples:
-      | searchItem | compareUrl            |
-      | WDIO       | https://webdriver.io/ |
+      | searchItem | compareUrl            | navigateUrl        |
+      | WDIO       | https://webdriver.io/ | https://google.com |
