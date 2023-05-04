@@ -1,6 +1,6 @@
-Feature: Web Interactions
+Feature: Inputs
 
-# It shows basic interactions with the web
+# It shows basic interactions with inputs
 
   Scenario Outline: It should be able to enter number values to input type number
     Given Open page with provided url "<navigateUrl>"

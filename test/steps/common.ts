@@ -28,10 +28,17 @@ Then(/Element by query "(.*)" should has value "(.*)"/, async function (query, v
     expect(elemValue).toEqual(valueToCompare);
 });
 
-Then(/Element by query "(.*)" should has inner text "(.*)"/, async function (query, valueToCompare) {
-    const elem = await getElementByQuery(query);
+Then(
+    /Element by query "(.*)" should has inner text "(.*)"/,
+    async function (query, valueToCompare) {
+        const elem = await getElementByQuery(query);
 
-    const elemValue = await elem.getText();
+        const elemValue = await elem.getText();
 
-    expect(elemValue).toEqual(valueToCompare);
+        expect(elemValue).toEqual(valueToCompare);
+    },
+);
+
+Then(/Current tab should has title "(.*)"/, async function (tabTitle) {
+    expect(await browser.getTitle()).toEqual(tabTitle);
 });

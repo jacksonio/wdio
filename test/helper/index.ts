@@ -4,8 +4,13 @@ export function getAbsoluteRoute(routeToFile: string) {
     return path.join(process.cwd(), routeToFile);
 }
 
-export function getExecutionRoute() {
-    return process.env.npm_config_feature ?? '**';
+export function getExecutionRouteFolder() {
+    return process.env.npm_config_folder ?? '**';
+}
+
+
+export function getExecutionRouteFile() {
+    return process.env.npm_config_feature ?? '*';
 }
 
 export async function getElementByQuery(query: string) {

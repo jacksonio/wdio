@@ -5,9 +5,13 @@
         "module": "commonjs",
         "types": [
             "node",
-            "@wdio/globals/types",
+            "webdriverio",
+            "@wdio/local-runner",
             "expect-webdriverio",
-            "@wdio/cucumber-framework"
+            "@wdio/globals/types",
+            "wdio-intercept-service",
+            "@types/node",
+            "@wdio/types"
         ],
         "target": "es2022",
         "esModuleInterop": true,

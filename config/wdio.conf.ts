@@ -1,5 +1,5 @@
 import type { Options } from '@wdio/types'
-import { getAbsoluteRoute, getExecutionRoute } from '../test/helper'
+import { getAbsoluteRoute, getExecutionRouteFile, getExecutionRouteFolder } from "../test/helper";
 import * as dotenv from 'dotenv'
 
 dotenv.config();
@@ -11,7 +11,7 @@ export const conf: Options.Testrunner = {
             project: getAbsoluteRoute('/tsconfig.json'),
         },
     },
-    specs: [getAbsoluteRoute(`/test/features/${getExecutionRoute()}/*.feature`)],
+    specs: [getAbsoluteRoute(`/test/features/${getExecutionRouteFolder()}/${getExecutionRouteFile()}.feature`)],
     exclude: [],
     framework: 'cucumber',
     cucumberOpts: {
