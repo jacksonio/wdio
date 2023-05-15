@@ -29,7 +29,7 @@ export const config: Options.Testrunner = {
     cucumberOpts: {
         require: [`${process.cwd()}/test/steps/*.ts`],
         backtrace: false,
-        requireModule: [],
+        requireModule: [`${process.cwd()}/test/worlds/*.ts`, `${process.cwd()}/test/hooks/*.ts`],
         dryRun: false,
         failFast: false,
         snippets: true,
