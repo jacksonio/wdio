@@ -13,7 +13,7 @@ Then(/Click on the (.*)/, async function (linkAddress) {
     if (elem) await elem.click();
 });
 
-Then(/Url should match (.*)/, async function (linkAddress) {
+Then(/Url should match "(.*)"/, async function (linkAddress) {
     const siteUrl = await browser.getUrl();
     chai.expect(siteUrl).to.equal(linkAddress);
 });
